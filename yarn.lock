@@ -1077,6 +1077,15 @@
     sudo-prompt "^9.1.1"
     username "^5.1.0"
 
+"@electron-forge/maker-base@7.11.2":
+  version "7.11.2"
+  resolved "https://registry.yarnpkg.com/@electron-forge/maker-base/-/maker-base-7.11.2.tgz#9388c64094dda139a032703cb69f4fcb29484fa9"
+  integrity sha512-9934zYu9WVdgCYQXvtS+eL1oyLagsY8JlWhZmoK8yWTYftSAydH7jb3seVpfy6n85SYmY/yjcAy2lvOTy5dUwA==
+  dependencies:
+    "@electron-forge/shared-types" "7.11.2"
+    fs-extra "^10.0.0"
+    which "^2.0.2"
+
 "@electron-forge/maker-base@7.7.0", "@electron-forge/maker-base@^6.0.0 || ^7.0.0":
   version "7.7.0"
   resolved "https://registry.yarnpkg.com/@electron-forge/maker-base/-/maker-base-7.7.0.tgz#11882c4a3638a3031103a339459184430f6daa89"
@@ -1096,6 +1105,17 @@
     fs-extra "^10.0.0"
   optionalDependencies:
     electron-installer-dmg "^5.0.1"
+
+"@electron-forge/maker-flatpak@^7.11.2":
+  version "7.11.2"
+  resolved "https://registry.yarnpkg.com/@electron-forge/maker-flatpak/-/maker-flatpak-7.11.2.tgz#defa8690c4cd63e903a420b10d5c04487234cd57"
+  integrity sha512-tc/lw1NVB8AGIVEozccFK4BR1oj9GTdV2tH+HDD6WSqvB4mjBKVKWjeR+8En3I546dnI/qWodtSN/OiL2ZTqIQ==
+  dependencies:
+    "@electron-forge/maker-base" "7.11.2"
+    "@electron-forge/shared-types" "7.11.2"
+    fs-extra "^10.0.0"
+  optionalDependencies:
+    "@malept/electron-installer-flatpak" "^0.11.4"
 
 "@electron-forge/maker-rpm@^7.7.0":
   version "7.7.0"
@@ -1162,6 +1182,16 @@
   dependencies:
     "@electron-forge/shared-types" "7.7.0"
 
+"@electron-forge/shared-types@7.11.2":
+  version "7.11.2"
+  resolved "https://registry.yarnpkg.com/@electron-forge/shared-types/-/shared-types-7.11.2.tgz#837c90d5c01eba8bb9a8e1b90354934dd2031786"
+  integrity sha512-Tcles7y74xy3jN5dEC+Pt1duJYk4c7W2xu98tjWW8RewmfKD2uHkie6I1I3yifPFZXZ/QfTlaFOOoKIQ9ENZjg==
+  dependencies:
+    "@electron-forge/tracer" "7.11.2"
+    "@electron/packager" "^18.3.5"
+    "@electron/rebuild" "^3.7.0"
+    listr2 "^7.0.2"
+
 "@electron-forge/shared-types@7.7.0":
   version "7.7.0"
   resolved "https://registry.yarnpkg.com/@electron-forge/shared-types/-/shared-types-7.7.0.tgz#936e6ded34e53a2bbd82583ce1e4c127e423f33d"
@@ -1219,6 +1249,13 @@
     "@electron-forge/shared-types" "7.7.0"
     "@electron-forge/template-base" "7.7.0"
     fs-extra "^10.0.0"
+
+"@electron-forge/tracer@7.11.2":
+  version "7.11.2"
+  resolved "https://registry.yarnpkg.com/@electron-forge/tracer/-/tracer-7.11.2.tgz#454692619efebe3122deaf03c73057af1542e700"
+  integrity sha512-U8j5Hyj2Zt7I5PciJvPJfmEv69Gb/Da9v+k655z3Jj1cuY0UnToEJ61IhXrzlTYqo+jUKC+fgAjDJ6vltJTS0A==
+  dependencies:
+    chrome-trace-event "^1.0.3"
 
 "@electron-forge/tracer@7.7.0":
   version "7.7.0"
@@ -1775,6 +1812,18 @@
   integrity sha512-1DpKU0Z5ThltBwjNySMC14g0CkbyhCaz9FkhxqNsZI6uAPJXFS8cMXlBKo26FJ8ZuW6S9GCMcR9IO5k2X5/9Fg==
   dependencies:
     cross-spawn "^7.0.1"
+
+"@malept/electron-installer-flatpak@^0.11.4":
+  version "0.11.4"
+  resolved "https://registry.yarnpkg.com/@malept/electron-installer-flatpak/-/electron-installer-flatpak-0.11.4.tgz#420bce6a71ffbeafaf134ef8ee2ba0e0db62f133"
+  integrity sha512-ZdwhT4WeeJWdnsmALUtQ7bn4pzYVh0Vg+4NnF1S3n3OACc9IWg+B+LxI5gT3XSXIrxogouqkjM6gD8S592awyA==
+  dependencies:
+    "@malept/flatpak-bundler" "^0.4.0"
+    debug "^4.1.1"
+    electron-installer-common "^0.10.0"
+    lodash "^4.17.15"
+    semver "^7.1.1"
+    yargs "^16.0.0"
 
 "@malept/flatpak-bundler@^0.4.0":
   version "0.4.0"
@@ -5753,7 +5802,7 @@ electron-forge-maker-appimage@^25.1.8:
   dependencies:
     app-builder-lib "25.1.8"
 
-electron-installer-common@^0.10.2:
+electron-installer-common@^0.10.0, electron-installer-common@^0.10.2:
   version "0.10.4"
   resolved "https://registry.yarnpkg.com/electron-installer-common/-/electron-installer-common-0.10.4.tgz#7a81265e0ec158eafd9dd474d5bb3a13946195e7"
   integrity sha512-8gMNPXfAqUE5CfXg8RL0vXpLE9HAaPkgLXVoHE3BMUzogMWenf4LmwQ27BdCUrEhkjrKl+igs2IHJibclR3z3Q==
